@@ -29,5 +29,17 @@ public class Employee {
         return wage;
     }
 
+    public void setDepartment(int department) {
+        if (department < 1 || department > 5) {
+            throw new IllegalArgumentException("Номера департаментов могут быть от 1 до 5");
+        }
+        this.department = department;
+    }
 
+    public void setWage(double wage) {
+        if (wage < 0) {
+            throw new IllegalArgumentException("Зарплата не может быть меньше нуля");
+        }
+        this.wage = wage;
+    }
 }
