@@ -74,11 +74,11 @@ public class Tests {
         return calculateTheAmountOfSalaryCosts(staff) / staff.length;
     }
 
+    //Метод вывода ФИО всех сотрудников
     public static void outputFullNamesOfEmployees(Employee[] staff) {
         System.out.println("------\nФИО всех сотрудников\n------");
         for (Employee employee : staff) {
             System.out.printf("%s %s %s \n", employee.getName(), employee.getSurname(), employee.getPatronymic());
         }
     }
-
 }
