@@ -20,6 +20,9 @@ public class Tests {
         System.out.printf("------\nСумма затрат на зарплаты в месяц\n------\n%.2fр\n\n\n", calculateTheAmountOfSalaryCosts(staff));
         System.out.printf("------\nCотрудник с минимальной зарплатой\n------\n%s\n\n\n", searchingEmployeeWithMinSalary(staff));
         System.out.printf("------\nCотрудник с максимальной зарплатой\n------\n%s\n\n\n", searchingEmployeeWithMaxSalary(staff));
+        System.out.printf("------\nСреднее значение зарплат\n------\n%s\n\n\n",calculateAverageSalary(staff));
+        outputFullNamesOfEmployees(staff);
+
     }
 
     //Метод вывода информации о всех сотрудниках
@@ -31,7 +34,7 @@ public class Tests {
         System.out.println();
     }
 
-    //Метод рассчета и вывода суммы затрат на зарплаты в месяц
+    //Метод рассчета суммы затрат на зарплаты в месяц
     public static double calculateTheAmountOfSalaryCosts(Employee[] staff) {
         double ammount = 0;
         for (Employee employee : staff) {
@@ -64,6 +67,18 @@ public class Tests {
             }
         }
         return employeeWithMaxSalary;
+    }
+
+    //Метод подсчета среднего значения зарплат
+    public static double calculateAverageSalary(Employee[] staff) {
+        return calculateTheAmountOfSalaryCosts(staff) / staff.length;
+    }
+
+    public static void outputFullNamesOfEmployees(Employee[] staff) {
+        System.out.println("------\nФИО всех сотрудников\n------");
+        for (Employee employee : staff) {
+            System.out.printf("%s %s %s \n", employee.getName(), employee.getSurname(), employee.getPatronymic());
+        }
     }
 
 }
