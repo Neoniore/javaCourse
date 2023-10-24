@@ -1,7 +1,5 @@
 package pro.sky.my.javaCourse.course1.coursework;
 
-import java.util.Arrays;
-
 public class Tests {
     public static void main(String[] args) {
         //Хранилище для записей о сотрудниках
@@ -18,7 +16,8 @@ public class Tests {
         staff[8] = new Employee("Елисей", "Иванов", "Львович", 5, 145000);
         staff[9] = new Employee("Андрей", "Петровский", "Степанович", 5, 250000);
 
-        showAllEmployees(staff);
+        //showAllEmployees(staff);
+        System.out.printf("Сумма затрат на зарплаты в месяц %.2fр", calculateTheAmountOfSalaryCosts(staff));
     }
 
     //Метод вывода информации о всех сотрудниках
@@ -28,4 +27,15 @@ public class Tests {
             System.out.println(employee + "\n");
         }
     }
+
+    //Метод рассчета и вывода суммы затрат на зарплаты в месяц
+    public static double calculateTheAmountOfSalaryCosts(Employee[] staff) {
+        double ammount = 0;
+        for (int i = 0; i < staff.length; i++) {
+            ammount += staff[i].getWage();
+        }
+        return ammount;
+    }
+
+
 }
