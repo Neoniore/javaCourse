@@ -11,6 +11,21 @@ public class Employee {
     //счетчик
     private static int counter;
 
+    //конструктор
+    public Employee(String name, String surname, String patronymic, int department, double wage) {
+        validationDepartmentInput(department);
+        validationWageInput(wage);
+
+        counter++;
+
+        id = counter;
+        this.name = name;
+        this.surname = surname;
+        this.patronymic = patronymic;
+        this.department = department;
+        this.wage = wage;
+    }
+
     //геттеры для всех полей класса
     public int getId() {
         return id;
@@ -57,21 +72,6 @@ public class Employee {
 
     public void setWage(double wage) {
         validationWageInput(wage);
-        this.wage = wage;
-    }
-
-    //конструктор
-    public Employee(String name, String surname, String patronymic, int department, double wage) {
-        validationDepartmentInput(department);
-        validationWageInput(wage);
-
-        counter++;
-
-        id = counter;
-        this.name = name;
-        this.surname = surname;
-        this.patronymic = patronymic;
-        this.department = department;
         this.wage = wage;
     }
 
