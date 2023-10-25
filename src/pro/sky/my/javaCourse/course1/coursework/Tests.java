@@ -22,6 +22,9 @@ public class Tests {
         System.out.printf("------\nCотрудник с максимальной зарплатой\n------\n%s\n\n\n", searchingEmployeeWithMaxSalary(employees));
         System.out.printf("------\nСреднее значение зарплат\n------\n%s\n\n\n",calculateAverageSalary(employees));
         outputFullNamesOfEmployees(employees);
+        indexingSalary(employees, 9.5);
+        showAllEmployees(employees); //тест индексации
+
 
     }
 
@@ -45,7 +48,7 @@ public class Tests {
 
     //Метод поиска сотрудника с минимальной зарплатой
     public static Employee searchingEmployeeWithMinSalary(Employee[] employees) {
-        double minSalary= 10_000_000_000d;
+        double minSalary = 10_000_000_000d;
         Employee employeeWithMinSalary = employees[0];
         for (Employee employee : employees) {
             if (employee.getSalary() < minSalary) {
@@ -82,8 +85,16 @@ public class Tests {
         }
     }
 
-//    public static Employee[] indexingSalary(Employee[] employees) {
-//
-//    }
+    //Метод индексации заработной платы всем сотрудникам
+    public static void indexingSalary(Employee[] employees, double percent) {
+        if (percent <= 0) {
+            throw new IllegalArgumentException("Процент повышения не может равняться нулю или быть меньше нуля");
+        }
+        for (Employee employee : employees) {
+            employee.setSalary(employee.getSalary() * percent / 100 + employee.getSalary());
+        }
+    }
+
+    
 
 }
