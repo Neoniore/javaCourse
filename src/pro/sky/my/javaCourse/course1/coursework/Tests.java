@@ -24,6 +24,9 @@ public class Tests {
         outputFullNamesOfEmployees(employees);
         indexingSalary(employees, 9.5);
         showAllEmployees(employees); //тест индексации
+        int department = 1;
+        System.out.printf("------\nCотрудник с минимальной зарплатой в отделе %d\n------\n%s\n\n\n", department, searchingEmployeeInDepartmentWithMinSalary(employees, department));
+
 
 
     }
@@ -95,6 +98,21 @@ public class Tests {
         }
     }
 
-    
+    static public Employee searchingEmployeeInDepartmentWithMinSalary(Employee[] employees, int department) {
+        double minSalary = 10_000_000_000d;
+        Employee employeeWithMinSalary = null;
+        for (Employee employee : employees) {
+            if (employee.getDepartment() == department) {
+                if (employee.getSalary() < minSalary) {
+                    minSalary = employee.getSalary();
+                    employeeWithMinSalary = employee;
+                }
+            }
+        }
+        if (employeeWithMinSalary == null) {
+            System.out.printf("В %d отделе нет сотрудников\n", department);
+        }
+        return employeeWithMinSalary;
+    }
 
 }
