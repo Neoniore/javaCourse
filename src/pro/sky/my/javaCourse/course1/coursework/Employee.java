@@ -52,13 +52,13 @@ public class Employee {
     }
 
     //методы для валидации ввода
-    private void validationDepartmentInput(int department) {
+    public static void validationDepartmentInput(int department) {
         if (department < 1 || department > 5) {
             throw new IllegalArgumentException("Номера департаментов могут быть от 1 до 5");
         }
     }
 
-    private void validationSalaryInput(double salary) {
+    public static void validationSalaryInput(double salary) {
         if (salary < 0) {
             throw new IllegalArgumentException("Зарплата не может быть меньше нуля");
         }
