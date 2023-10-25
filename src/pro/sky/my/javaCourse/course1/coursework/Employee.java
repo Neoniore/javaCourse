@@ -6,15 +6,15 @@ public class Employee {
     private String surname;
     private String patronymic;
     private int department;
-    private double wage;
+    private double salary;
 
     //счетчик
     private static int counter;
 
     //конструктор
-    public Employee(String name, String surname, String patronymic, int department, double wage) {
+    public Employee(String name, String surname, String patronymic, int department, double salary) {
         validationDepartmentInput(department);
-        validationWageInput(wage);
+        validationSalaryInput(salary);
 
         counter++;
 
@@ -23,7 +23,7 @@ public class Employee {
         this.surname = surname;
         this.patronymic = patronymic;
         this.department = department;
-        this.wage = wage;
+        this.salary = salary;
     }
 
     //геттеры для всех полей класса
@@ -47,8 +47,8 @@ public class Employee {
         return department;
     }
 
-    public double getWage() {
-        return wage;
+    public double getSalary() {
+        return salary;
     }
 
     //методы для валидации ввода
@@ -58,8 +58,8 @@ public class Employee {
         }
     }
 
-    private void validationWageInput(double wage) {
-        if (wage < 0) {
+    private void validationSalaryInput(double salary) {
+        if (salary < 0) {
             throw new IllegalArgumentException("Зарплата не может быть меньше нуля");
         }
     }
@@ -70,14 +70,14 @@ public class Employee {
         this.department = department;
     }
 
-    public void setWage(double wage) {
-        validationWageInput(wage);
-        this.wage = wage;
+    public void setSalary(double salary) {
+        validationSalaryInput(salary);
+        this.salary = salary;
     }
 
     //переопределение методов
     @Override
     public String toString() {
-        return "ФИО: " + name + " " + " " + patronymic + " " + " " + surname + "\n" + "Отдел " + department + "\nЗарплата " + wage + "\nid " + id;
+        return "ФИО: " + name + " " + " " + patronymic + " " + " " + surname + "\n" + "Отдел " + department + "\nЗарплата " + salary + "\nid " + id;
     }
 }

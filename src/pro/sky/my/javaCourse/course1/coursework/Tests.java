@@ -38,18 +38,18 @@ public class Tests {
     public static double calculateTheAmountOfSalaryCosts(Employee[] employees) {
         double ammount = 0;
         for (Employee employee : employees) {
-            ammount += employee.getWage();
+            ammount += employee.getSalary();
         }
         return ammount;
     }
 
     //Метод поиска сотрудника с минимальной зарплатой
     public static Employee searchingEmployeeWithMinSalary(Employee[] employees) {
-        double minWage= 10_000_000_000d;
+        double minSalary= 10_000_000_000d;
         Employee employeeWithMinSalary = employees[0];
         for (Employee employee : employees) {
-            if (employee.getWage() < minWage) {
-                minWage = employee.getWage();
+            if (employee.getSalary() < minSalary) {
+                minSalary = employee.getSalary();
                 employeeWithMinSalary = employee;
             }
         }
@@ -58,11 +58,11 @@ public class Tests {
 
     //Метод поиска сотрудника с максимальной зарплатой
     public static Employee searchingEmployeeWithMaxSalary(Employee[] employees) {
-        double maxWage= -1d;
+        double maxSalary= -1d;
         Employee employeeWithMaxSalary = employees[0];
         for (Employee employee : employees) {
-            if (employee.getWage() > maxWage) {
-                maxWage = employee.getWage();
+            if (employee.getSalary() > maxSalary) {
+                maxSalary = employee.getSalary();
                 employeeWithMaxSalary = employee;
             }
         }
