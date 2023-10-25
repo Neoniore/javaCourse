@@ -24,8 +24,10 @@ public class Tests {
         outputFullNamesOfEmployees(employees);
         indexingSalary(employees, 9.5);
         showAllEmployees(employees); //тест индексации
-        int department = 1;
+        int department = 5;
         System.out.printf("------\nCотрудник с минимальной зарплатой в отделе %d\n------\n%s\n\n\n", department, searchingEmployeeInDepartmentWithMinSalary(employees, department));
+
+        System.out.printf("------\nCотрудник с максимальной зарплатой в отделе %d\n------\n%s\n\n\n", department, searchingEmployeeInDepartmentWithMaxSalary(employees, department));
 
 
 
@@ -98,7 +100,9 @@ public class Tests {
         }
     }
 
-    static public Employee searchingEmployeeInDepartmentWithMinSalary(Employee[] employees, int department) {
+    //Метод поиска сотурудника с нимимальной зарплатой в отделе
+    public static Employee searchingEmployeeInDepartmentWithMinSalary(Employee[] employees, int department) {
+        Employee.validationDepartmentInput(department);
         double minSalary = 10_000_000_000d;
         Employee employeeWithMinSalary = null;
         for (Employee employee : employees) {
@@ -114,5 +118,25 @@ public class Tests {
         }
         return employeeWithMinSalary;
     }
+
+    //Метод поиска сотурудника с максимальной зарплатой в отделе
+    public static Employee searchingEmployeeInDepartmentWithMaxSalary(Employee[] employees, int department) {
+        Employee.validationDepartmentInput(department);
+        double maxSalary = -1;
+        Employee employeeWithMinSalary = null;
+        for (Employee employee : employees) {
+            if (employee.getDepartment() == department) {
+                if (employee.getSalary() > maxSalary) {
+                    maxSalary = employee.getSalary();
+                    employeeWithMinSalary = employee;
+                }
+            }
+        }
+        if (employeeWithMinSalary == null) {
+            System.out.printf("В %d отделе нет сотрудников\n", department);
+        }
+        return employeeWithMinSalary;
+    }
+
 
 }
