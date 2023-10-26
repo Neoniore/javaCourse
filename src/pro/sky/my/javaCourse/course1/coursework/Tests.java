@@ -26,8 +26,8 @@ public class Tests {
         showAllEmployees(employees); //тест индексации
         int department = 5;
         System.out.printf("------\nCотрудник с минимальной зарплатой в отделе %d\n------\n%s\n\n\n", department, searchingEmployeeInDepartmentWithMinSalary(employees, department));
-
         System.out.printf("------\nCотрудник с максимальной зарплатой в отделе %d\n------\n%s\n\n\n", department, searchingEmployeeInDepartmentWithMaxSalary(employees, department));
+        System.out.printf("------\nСреднее значение зарплат в отделе %d\n------\n%s\n\n\n", department, calculateAverageSalaryInDepartment(employees, department));
 
 
 
@@ -137,6 +137,22 @@ public class Tests {
         }
         return employeeWithMinSalary;
     }
+
+    //Метод поиска средней зарплаты по отделу
+    public static double calculateAverageSalaryInDepartment(Employee[] employees, int department) {
+        Employee.validationDepartmentInput(department);
+        double avgSalaryInDepartment, ammount = 0;
+        int employeesInDepartment = 0;
+        for (Employee employee : employees) {
+            if (employee.getDepartment() == department) {
+                employeesInDepartment++;
+                ammount += employee.getSalary();
+            }
+        }
+        avgSalaryInDepartment = ammount / employeesInDepartment;
+        return avgSalaryInDepartment;
+    }
+
 
 
 }
