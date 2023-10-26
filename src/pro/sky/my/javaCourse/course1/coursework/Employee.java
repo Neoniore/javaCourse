@@ -64,6 +64,13 @@ public class Employee {
         }
     }
 
+    //Метод валидации индексации ЗП
+    public static void validationSalaryIndexInput(double percent) {
+        if (percent <= 0) {
+            throw new IllegalArgumentException("Процент повышения ЗП не может равняться нулю или быть меньше нуля");
+        }
+    }
+
     //сеттеры департамента и зарплаты
     public void setDepartment(int department) {
         validationDepartmentInput(department);
