@@ -22,15 +22,16 @@ public class Tests {
         System.out.printf("------\nCотрудник с максимальной зарплатой\n------\n%s\n\n\n", searchingEmployeeWithMaxSalary(employees));
         System.out.printf("------\nСреднее значение зарплат\n------\n%s\n\n\n",calculateAverageSalary(employees));
         outputFullNamesOfEmployees(employees);
-        indexingSalary(employees, 9.5);
+        //indexingSalary(employees, 9.5);
         showAllEmployees(employees); //тест индексации
         int department = 5;
         System.out.printf("------\nCотрудник с минимальной зарплатой в отделе %d\n------\n%s\n\n\n", department, searchingEmployeeInDepartmentWithMinSalary(employees, department));
         System.out.printf("------\nCотрудник с максимальной зарплатой в отделе %d\n------\n%s\n\n\n", department, searchingEmployeeInDepartmentWithMaxSalary(employees, department));
         System.out.printf("------\nСреднее значение зарплат в отделе %d\n------\n%s\n\n\n", department, calculateAverageSalaryInDepartment(employees, department));
         indexingSalaryInDepartment(employees,1, 25);
-        showAllEmployees(employees); //тест индексации
+        //howAllEmployees(employees); //тест индексации
         showAllEmployeesInDepartment(employees, department);
+        searchingForASalaryLessThanANumber(employees, 75000);
 
     }
 
@@ -166,13 +167,27 @@ public class Tests {
     //Метод вывода информации о сотрудниках отдела
     public static void showAllEmployeesInDepartment(Employee[] employees, int department) {
         Employee.validationDepartmentInput(department);
-        System.out.printf("------\nСотрудники в %d отделе\n------", department);
+        System.out.printf("------\nСотрудники в %d отделе\n------\n", department);
         for (Employee employee : employees) {
             if (employee.getDepartment() == department) {
-                System.out.printf("\nid %s\nФИО %s %s %s\nЗА %s\n", employee.getId(), employee.getName(), employee.getSurname(), employee.getPatronymic(), employee.getSalary());
+                System.out.printf("id %s\nФИО %s %s %s\nЗА %s\n\n", employee.getId(), employee.getName(), employee.getSurname(), employee.getPatronymic(), employee.getSalary());
             }
         }
     }
 
-
+    //Метод получения всех сотрудников с зарплатой меньше переданного числа
+    public static void searchingForASalaryLessThanANumber(Employee[] employees, double number) {
+        System.out.printf("------\nСотрудники c зарплатой меньше %.2f\n------\n", number);
+        int count = 0;
+        for (Employee employee : employees) {
+            if (employee.getSalary() < number) {
+                System.out.printf("id %s\nФИО %s %s %s\nЗА %s\n\n", employee.getId(), employee.getName(), employee.getSurname(), employee.getPatronymic(), employee.getSalary());
+                count ++;
+            }
+        }
+        if (count == 0) {
+            System.out.printf("Сотрудников c зарплатой меньше %.2f нет\n", number);
+        }
     }
+}
+
