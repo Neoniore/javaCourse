@@ -30,6 +30,7 @@ public class Tests {
         System.out.printf("------\nСреднее значение зарплат в отделе %d\n------\n%s\n\n\n", department, calculateAverageSalaryInDepartment(employees, department));
         indexingSalaryInDepartment(employees,1, 25);
         showAllEmployees(employees); //тест индексации
+        showAllEmployeesInDepartment(employees, department);
 
     }
 
@@ -162,6 +163,16 @@ public class Tests {
         }
     }
 
+    //Метод вывода информации о сотрудниках отдела
+    public static void showAllEmployeesInDepartment(Employee[] employees, int department) {
+        Employee.validationDepartmentInput(department);
+        System.out.printf("------\nСотрудники в %d отделе\n------", department);
+        for (Employee employee : employees) {
+            if (employee.getDepartment() == department) {
+                System.out.printf("\nid %s\nФИО %s %s %s\nЗА %s\n", employee.getId(), employee.getName(), employee.getSurname(), employee.getPatronymic(), employee.getSalary());
+            }
+        }
+    }
 
 
     }
