@@ -6,10 +6,25 @@ public class Employee {
     private String surname;
     private String patronymic;
     private int department;
-    private double wage;
+    private double salary;
 
     //счетчик
     private static int counter;
+
+    //конструктор
+    public Employee(String name, String surname, String patronymic, int department, double salary) {
+        validationDepartmentInput(department);
+        validationSalaryInput(salary);
+
+        counter++;
+
+        id = counter;
+        this.name = name;
+        this.surname = surname;
+        this.patronymic = patronymic;
+        this.department = department;
+        this.salary = salary;
+    }
 
     //геттеры для всех полей класса
     public int getId() {
@@ -32,20 +47,27 @@ public class Employee {
         return department;
     }
 
-    public double getWage() {
-        return wage;
+    public double getSalary() {
+        return salary;
     }
 
     //методы для валидации ввода
-    private void validationDepartmentInput(int department) {
+    public static void validationDepartmentInput(int department) {
         if (department < 1 || department > 5) {
             throw new IllegalArgumentException("Номера департаментов могут быть от 1 до 5");
         }
     }
 
-    private void validationWageInput(double wage) {
-        if (wage < 0) {
+    public static void validationSalaryInput(double salary) {
+        if (salary < 0) {
             throw new IllegalArgumentException("Зарплата не может быть меньше нуля");
+        }
+    }
+
+    //Метод валидации индексации ЗП
+    public static void validationSalaryIndexInput(double percent) {
+        if (percent <= 0) {
+            throw new IllegalArgumentException("Процент повышения ЗП не может равняться нулю или быть меньше нуля");
         }
     }
 
@@ -55,29 +77,14 @@ public class Employee {
         this.department = department;
     }
 
-    public void setWage(double wage) {
-        validationWageInput(wage);
-        this.wage = wage;
-    }
-
-    //конструктор
-    public Employee(String name, String surname, String patronymic, int department, double wage) {
-        validationDepartmentInput(department);
-        validationWageInput(wage);
-
-        counter++;
-
-        id = counter;
-        this.name = name;
-        this.surname = surname;
-        this.patronymic = patronymic;
-        this.department = department;
-        this.wage = wage;
+    public void setSalary(double salary) {
+        validationSalaryInput(salary);
+        this.salary = salary;
     }
 
     //переопределение методов
     @Override
     public String toString() {
-        return "ФИО: " + name + " " + " " + patronymic + " " + " " + surname + "\n" + "Отдел " + department + "\nЗарплата " + wage + "\nid " + id;
+        return "ФИО: " + name + " " + " " + patronymic + " " + " " + surname + "\n" + "Отдел " + department + "\nЗарплата " + salary + "\nid " + id;
     }
 }
