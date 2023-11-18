@@ -4,8 +4,9 @@ public class Tests {
     public static void main(String[] args) {
 
         //Хранилище для записей о сотрудниках
-        EmployeeBook employeeBook = new EmployeeBook();
-        employeeBook.
+        EmployeeBook employeeBook = new EmployeeBook(5);
+        employeeBook.createEmployee("Александр", "Панченко", "Витальевич", 1, 1500000);
+
 
 
 //            employees[0] = new Employee("Александр", "Панченко", "Витальевич", 1, 1500000);

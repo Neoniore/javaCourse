@@ -1,27 +1,28 @@
 package pro.sky.my.javaCourse.course1.coursework;
 
 public class EmployeeBook {
-    private int id;
+    private final int id;
     private Employee[] employees;
 
     private static int counter;
 
 
     //конструктор
-    public EmployeeBook(Employee[] employees) {
+    public EmployeeBook(int numberOfEmployees) {
         counter++;
 
         this.id = counter;
-        this.employees = employees;
+        this.employees = new Employee[numberOfEmployees];
     }
 
-    //геттер
+    //геттер - ?
 
     //сеттер
 
     //Метод добавления работника в EmployeeBook
-    public void createEmployee(int String name, String surname, String patronymic, int department, double salary) {
+    public void createEmployee(String name, String surname, String patronymic, int department, double salary) {
 
+        Employee employee = new Employee(name, surname, patronymic, department, salary);
     }
 
 
