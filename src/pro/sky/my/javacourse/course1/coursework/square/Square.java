@@ -1,4 +1,4 @@
-package pro.sky.my.javaCourse.course1.coursework.square;
+package pro.sky.my.javacourse.course1.coursework.square;
 
 public class Square {
     public static void main(String[] args) {

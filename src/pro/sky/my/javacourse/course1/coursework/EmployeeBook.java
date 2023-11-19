@@ -1,4 +1,4 @@
-package pro.sky.my.javaCourse.course1.coursework;
+package pro.sky.my.javacourse.course1.coursework;
 
 public class EmployeeBook {
     private final int id;
