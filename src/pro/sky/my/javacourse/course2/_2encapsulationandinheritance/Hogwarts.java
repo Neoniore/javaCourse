@@ -1,9 +1,15 @@
 package pro.sky.my.javacourse.course2._2encapsulationandinheritance;
 
 public class Hogwarts {
+
     private int powerOfMagic;
     private int transgressionDistance;
 
+    /**
+     *
+     * @param powerOfMagic - сила магии
+     * @param transgressionDistance - дальность трансгрессирования
+     */
     public Hogwarts(int powerOfMagic, int transgressionDistance) {
         this.powerOfMagic = powerOfMagic;
         this.transgressionDistance = transgressionDistance;

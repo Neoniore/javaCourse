@@ -1,11 +1,21 @@
 package pro.sky.my.javacourse.course2._2encapsulationandinheritance;
 
 public class Slytherin extends Hogwarts {
+
     private int cunning;
     private int determination;
     private int ambition;
     private int resourcefulness;
     private int thirstForPower;
+
+    /**
+     *
+     * @param cunning - хитрость
+     * @param determination - решительность
+     * @param ambition - амбициозность
+     * @param resourcefulness - находчивость
+     * @param thirstForPower - жажда власти
+     */
 
     public Slytherin(int powerOfMagic, int transgressionDistance, int cunning, int determination, int ambition, int resourcefulness, int thirstForPower) {
         super(powerOfMagic, transgressionDistance);
