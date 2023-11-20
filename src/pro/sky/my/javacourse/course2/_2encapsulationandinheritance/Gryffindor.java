@@ -6,6 +6,8 @@ public class Gryffindor extends Hogwarts {
 
     public Gryffindor(int powerOfMagic, int transgressionDistance, int nobility, int bravery) {
         super(powerOfMagic, transgressionDistance);
+        this.nobility = nobility;
+        this.bravery = bravery;
     }
 
     public int getNobility() {
