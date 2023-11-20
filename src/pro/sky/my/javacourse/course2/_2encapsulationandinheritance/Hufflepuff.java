@@ -14,8 +14,8 @@ public class Hufflepuff extends Hogwarts {
      * @param loyalty - верность
      * @param honesty - честность
      */
-    public Hufflepuff(int powerOfMagic, int transgressionDistance, int industriousness, int loyalty, int honesty) {
-        super(powerOfMagic, transgressionDistance);
+    public Hufflepuff(String name, int powerOfMagic, int transgressionDistance, int industriousness, int loyalty, int honesty) {
+        super(name, powerOfMagic, transgressionDistance);
         this.industriousness = industriousness;
         this.loyalty = loyalty;
         this.honesty = honesty;

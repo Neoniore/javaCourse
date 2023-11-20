@@ -2,17 +2,24 @@ package pro.sky.my.javacourse.course2._2encapsulationandinheritance;
 
 public class Hogwarts {
 
+    private final String name;
     private int powerOfMagic;
     private int transgressionDistance;
 
     /**
      *
+     * @param name - фио студента
      * @param powerOfMagic - сила магии
      * @param transgressionDistance - дальность трансгрессирования
      */
-    public Hogwarts(int powerOfMagic, int transgressionDistance) {
+    public Hogwarts(String name, int powerOfMagic, int transgressionDistance) {
+        this.name = name;
         this.powerOfMagic = powerOfMagic;
         this.transgressionDistance = transgressionDistance;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public int getPowerOfMagic() {
@@ -29,5 +36,12 @@ public class Hogwarts {
 
     public void setTransgressionDistance(int transgressionDistance) {
         this.transgressionDistance = transgressionDistance;
+    }
+
+    @Override
+    public String toString() {
+        return  "name " + name + ' ' +
+                ", powerOfMagic=" + powerOfMagic +
+                ", transgressionDistance=" + transgressionDistance;
     }
 }

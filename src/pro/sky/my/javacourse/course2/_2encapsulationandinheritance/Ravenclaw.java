@@ -15,8 +15,8 @@ public class Ravenclaw extends Hogwarts {
      * @param creativity - творчество
      */
 
-    public Ravenclaw(int powerOfMagic, int transgressionDistance, int mind, int wisdom, int creativity) {
-        super(powerOfMagic, transgressionDistance);
+    public Ravenclaw(String name, int powerOfMagic, int transgressionDistance, int mind, int wisdom, int creativity) {
+        super(name, powerOfMagic, transgressionDistance);
         this.mind = mind;
         this.wisdom = wisdom;
         this.creativity = creativity;

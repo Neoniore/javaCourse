@@ -10,8 +10,9 @@ public class Gryffindor extends Hogwarts {
      * @param nobility - благородство
      * @param bravery - храбрость
      */
-    public Gryffindor(int powerOfMagic, int transgressionDistance, int nobility, int bravery) {
-        super(powerOfMagic, transgressionDistance);
+
+    public Gryffindor(String name, int powerOfMagic, int transgressionDistance, int nobility, int bravery) {
+        super(name, powerOfMagic, transgressionDistance);
         this.nobility = nobility;
         this.bravery = bravery;
     }
@@ -30,5 +31,12 @@ public class Gryffindor extends Hogwarts {
 
     public void setBravery(int bravery) {
         this.bravery = bravery;
+    }
+
+    @Override
+    public String toString() {
+        return  super.toString() +
+                " nobility=" + nobility +
+                ", bravery=" + bravery;
     }
 }

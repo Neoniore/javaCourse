@@ -17,8 +17,8 @@ public class Slytherin extends Hogwarts {
      * @param thirstForPower - жажда власти
      */
 
-    public Slytherin(int powerOfMagic, int transgressionDistance, int cunning, int determination, int ambition, int resourcefulness, int thirstForPower) {
-        super(powerOfMagic, transgressionDistance);
+    public Slytherin(String name, int powerOfMagic, int transgressionDistance, int cunning, int determination, int ambition, int resourcefulness, int thirstForPower) {
+        super(name, powerOfMagic, transgressionDistance);
         this.cunning = cunning;
         this.determination = determination;
         this.ambition = ambition;
