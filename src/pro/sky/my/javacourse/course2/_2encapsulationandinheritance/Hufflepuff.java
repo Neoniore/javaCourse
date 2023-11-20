@@ -4,9 +4,9 @@ package pro.sky.my.javacourse.course2._2encapsulationandinheritance;
 
 public class Hufflepuff extends Hogwarts {
 
-    int industriousness;
-    int loyalty;
-    int honesty;
+    private int industriousness;
+    private int loyalty;
+    private int honesty;
 
     /**
      *
@@ -21,28 +21,14 @@ public class Hufflepuff extends Hogwarts {
         this.honesty = honesty;
     }
 
-    public int getIndustriousness() {
-        return industriousness;
-    }
-
-    public void setIndustriousness(int industriousness) {
-        this.industriousness = industriousness;
-    }
-
-    public int getLoyalty() {
-        return loyalty;
-    }
-
-    public void setLoyalty(int loyalty) {
-        this.loyalty = loyalty;
-    }
-
-    public int getHonesty() {
-        return honesty;
-    }
-
-    public void setHonesty(int honesty) {
-        this.honesty = honesty;
+    public void compareStudents(Hufflepuff student) {
+        if (this.industriousness + this.loyalty + this.honesty > student.industriousness + student.loyalty + student.honesty) {
+            System.out.printf("%s лучший Пуффендуец, чем %s\n", this.getName(), student.getName());
+        } else if (this.industriousness + this.loyalty + this.honesty < student.industriousness + student.loyalty + student.honesty) {
+            System.out.printf("%s лучший Пуффендуец, чем %s\n", student.getName(), this.getName());
+        } else {
+            System.out.printf("Пуффендуйцы %s и %s обладают равной силой\n", this.getName(), student.getName());
+        }
     }
 
     @Override

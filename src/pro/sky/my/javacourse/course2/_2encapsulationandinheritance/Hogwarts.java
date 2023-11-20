@@ -22,20 +22,14 @@ public class Hogwarts {
         return name;
     }
 
-    public int getPowerOfMagic() {
-        return powerOfMagic;
-    }
-
-    public void setPowerOfMagic(int powerOfMagic) {
-        this.powerOfMagic = powerOfMagic;
-    }
-
-    public int getTransgressionDistance() {
-        return transgressionDistance;
-    }
-
-    public void setTransgressionDistance(int transgressionDistance) {
-        this.transgressionDistance = transgressionDistance;
+    public void compareStudents(Hogwarts student) {
+        if (this.powerOfMagic + this.transgressionDistance > student.powerOfMagic + student.transgressionDistance) {
+            System.out.printf("%s обладает большей силой, чем %s\n", this.getName(), student.getName());
+        } else if (this.powerOfMagic + this.transgressionDistance < student.powerOfMagic + student.transgressionDistance) {
+            System.out.printf("%s обладает большей силой, чем %s\n", student.getName(), this.getName());
+        } else {
+            System.out.printf("%s и %s обладают равной силой\n", this.getName(), student.getName());
+        }
     }
 
     @Override

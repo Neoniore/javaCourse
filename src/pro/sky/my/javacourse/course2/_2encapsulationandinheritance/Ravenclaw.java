@@ -4,9 +4,9 @@ package pro.sky.my.javacourse.course2._2encapsulationandinheritance;
 
 public class Ravenclaw extends Hogwarts {
 
-    int mind;
-    int wisdom;
-    int creativity;
+    private int mind;
+    private int wisdom;
+    private int creativity;
 
     /**
      *
@@ -22,28 +22,14 @@ public class Ravenclaw extends Hogwarts {
         this.creativity = creativity;
     }
 
-    public int getMind() {
-        return mind;
-    }
-
-    public void setMind(int mind) {
-        this.mind = mind;
-    }
-
-    public int getWisdom() {
-        return wisdom;
-    }
-
-    public void setWisdom(int wisdom) {
-        this.wisdom = wisdom;
-    }
-
-    public int getCreativity() {
-        return creativity;
-    }
-
-    public void setCreativity(int creativity) {
-        this.creativity = creativity;
+    public void compareStudents(Ravenclaw student) {
+        if (this.mind + this.wisdom + this.creativity > student.mind + student.wisdom + student.creativity) {
+            System.out.printf("%s лучший Когтевранец, чем %s\n", this.getName(), student.getName());
+        } else if (this.mind + this.wisdom + this.creativity < student.mind + student.wisdom + student.creativity) {
+            System.out.printf("%s лучший Когтевранец, чем %s\n", student.getName(), this.getName());
+        } else {
+            System.out.printf("Когтевранцы %s и %s обладают равной силой\n", this.getName(), student.getName());
+        }
     }
 
     @Override

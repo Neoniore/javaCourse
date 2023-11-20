@@ -26,44 +26,16 @@ public class Slytherin extends Hogwarts {
         this.thirstForPower = thirstForPower;
     }
 
-    public int getCunning() {
-        return cunning;
-    }
-
-    public void setCunning(int cunning) {
-        this.cunning = cunning;
-    }
-
-    public int getDetermination() {
-        return determination;
-    }
-
-    public void setDetermination(int determination) {
-        this.determination = determination;
-    }
-
-    public int getAmbition() {
-        return ambition;
-    }
-
-    public void setAmbition(int ambition) {
-        this.ambition = ambition;
-    }
-
-    public int getResourcefulness() {
-        return resourcefulness;
-    }
-
-    public void setResourcefulness(int resourcefulness) {
-        this.resourcefulness = resourcefulness;
-    }
-
-    public int getThirstForPower() {
-        return thirstForPower;
-    }
-
-    public void setThirstForPower(int thirstForPower) {
-        this.thirstForPower = thirstForPower;
+    public void compareStudents(Slytherin student) {
+        if (this.cunning + this.determination + this.ambition + this.resourcefulness + this.thirstForPower >
+                student.cunning + student.determination + student.ambition + student.resourcefulness + student.thirstForPower) {
+            System.out.printf("%s лучший Слизеринец, чем %s\n", this.getName(), student.getName());
+        } else if (this.cunning + this.determination + this.ambition + this.resourcefulness + this.thirstForPower <
+                student.cunning + student.determination + student.ambition + student.resourcefulness + student.thirstForPower) {
+            System.out.printf("%s лучший Слизеринец, чем %s\n", student.getName(), this.getName());
+        } else {
+            System.out.printf("Слизеринцы %s и %s обладают равной силой\n", this.getName(), student.getName());
+        }
     }
 
     @Override

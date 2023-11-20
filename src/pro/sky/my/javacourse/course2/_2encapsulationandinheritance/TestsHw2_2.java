@@ -2,9 +2,9 @@ package pro.sky.my.javacourse.course2._2encapsulationandinheritance;
 
 public class TestsHw2_2 {
     public static void main(String[] args) {
-        Gryffindor harryPotter = new Gryffindor("Гарри Поттер", 84, 79, 85, 94, 81);
-        Gryffindor hermioneGranger = new Gryffindor("Гермиона Грейнджер", 82, 85, 94, 92, 91);
-        Gryffindor ronaldWeasley = new Gryffindor("Рон Уизли", 67, 64, 85, 99, 65);
+        Gryffindor harryPotter = new Gryffindor("Гарри Поттер", 84, 80, 90, 95, 89);
+        Gryffindor hermioneGranger = new Gryffindor("Гермиона Грейнджер", 80, 85, 89, 92, 90);
+        Gryffindor ronaldWeasley = new Gryffindor("Рон Уизли", 67, 71, 82, 99, 65);
 
         Slytherin dracoMalfoy = new Slytherin("Драко Малфой", 76, 75, 80, 75, 87, 77, 93);
         Slytherin grahamMontague = new Slytherin("Грэхэм Монтегю", 60, 87, 69, 68, 82, 82, 63);
@@ -22,5 +22,16 @@ public class TestsHw2_2 {
         System.out.println("dracoMalfoy = " + dracoMalfoy);
         System.out.println("cedricDiggory = " + cedricDiggory);
         System.out.println("choChang = " + choChang);
+
+        System.out.println();
+
+        ronaldWeasley.compareStudents(hermioneGranger);
+        dracoMalfoy.compareStudents(gregoryGoyle);
+        zachariasSmith.compareStudents(justinFinchFletchley);
+        padmaPatil.compareStudents(marcusBelby);
+
+        System.out.println();
+
+        harryPotter.compareStudents(grahamMontague);
     }
 }

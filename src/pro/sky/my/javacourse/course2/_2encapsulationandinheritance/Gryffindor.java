@@ -2,9 +2,9 @@ package pro.sky.my.javacourse.course2._2encapsulationandinheritance;
 
 public class Gryffindor extends Hogwarts {
 
-    int nobility;
-    int honor;
-    int bravery;
+    private int nobility;
+    private int honor;
+    private int bravery;
 
     /**
      *
@@ -20,20 +20,14 @@ public class Gryffindor extends Hogwarts {
         this.bravery = bravery;
     }
 
-    public int getNobility() {
-        return nobility;
-    }
-
-    public void setNobility(int nobility) {
-        this.nobility = nobility;
-    }
-
-    public int getBravery() {
-        return bravery;
-    }
-
-    public void setBravery(int bravery) {
-        this.bravery = bravery;
+    public void compareStudents(Gryffindor student) {
+        if (this.nobility + this.honor + this.bravery > student.nobility + student.honor + student.bravery) {
+            System.out.printf("%s лучший Гриффиндорец, чем %s\n", this.getName(), student.getName());
+        } else if (this.nobility + this.honor + this.bravery < student.nobility + student.honor + student.bravery) {
+            System.out.printf("%s лучший Гриффиндорец, чем %s\n", student.getName(), this.getName());
+        } else {
+            System.out.printf("Гриффиндорцы %s и %s обладают равной силой\n", this.getName(), student.getName());
+        }
     }
 
     @Override
