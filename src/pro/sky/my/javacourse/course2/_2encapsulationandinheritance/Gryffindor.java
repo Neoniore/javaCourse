@@ -3,17 +3,20 @@ package pro.sky.my.javacourse.course2._2encapsulationandinheritance;
 public class Gryffindor extends Hogwarts {
 
     int nobility;
+    int honor;
     int bravery;
 
     /**
      *
      * @param nobility - благородство
+     * @param honor - честь
      * @param bravery - храбрость
      */
 
-    public Gryffindor(String name, int powerOfMagic, int transgressionDistance, int nobility, int bravery) {
+    public Gryffindor(String name, int powerOfMagic, int transgressionDistance, int nobility, int honor, int bravery) {
         super(name, powerOfMagic, transgressionDistance);
         this.nobility = nobility;
+        this.honor = honor;
         this.bravery = bravery;
     }
 
@@ -36,7 +39,8 @@ public class Gryffindor extends Hogwarts {
     @Override
     public String toString() {
         return  super.toString() +
-                " nobility=" + nobility +
+                "nobility=" + nobility +
+                ", honor=" + honor +
                 ", bravery=" + bravery;
     }
 }

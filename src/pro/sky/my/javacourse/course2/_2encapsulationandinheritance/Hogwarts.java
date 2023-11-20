@@ -40,8 +40,9 @@ public class Hogwarts {
 
     @Override
     public String toString() {
-        return  "name " + name + ' ' +
+        return  "name=" + name +
                 ", powerOfMagic=" + powerOfMagic +
-                ", transgressionDistance=" + transgressionDistance;
+                ", transgressionDistance=" + transgressionDistance
+                + ", ";
     }
 }
