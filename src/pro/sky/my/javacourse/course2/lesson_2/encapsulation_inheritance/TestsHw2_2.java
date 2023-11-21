@@ -1,4 +1,4 @@
-package pro.sky.my.javacourse.course2._2encapsulationandinheritance;
+package pro.sky.my.javacourse.course2.lesson_2.encapsulation_inheritance;
 
 public class TestsHw2_2 {
     public static void main(String[] args) {

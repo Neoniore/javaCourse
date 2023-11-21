@@ -1,4 +1,4 @@
-package pro.sky.my.javacourse.course2._1memoryinjava;
+package pro.sky.my.javacourse.course2.lesson_1.memory_java;
 
 public class Person {
     private String name;
@@ -7,14 +7,6 @@ public class Person {
     public Person(String name, String surname) {
         this.name = name;
         this.surname = surname;
-    }
-
-    public String getName(Person person) {
-        return person.name;
-    }
-
-    public String getSurname(Person person) {
-        return person.surname;
     }
 
     public void setName(String name) {
