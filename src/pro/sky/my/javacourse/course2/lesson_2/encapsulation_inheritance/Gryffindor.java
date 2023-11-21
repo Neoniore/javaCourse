@@ -1,10 +1,10 @@
-package pro.sky.my.javacourse.course2._2encapsulationandinheritance;
+package pro.sky.my.javacourse.course2.lesson_2.encapsulation_inheritance;
 
 public class Gryffindor extends Hogwarts {
 
-    private int nobility;
-    private int honor;
-    private int bravery;
+    private final int nobility;
+    private final int honor;
+    private final int bravery;
 
     /**
      *

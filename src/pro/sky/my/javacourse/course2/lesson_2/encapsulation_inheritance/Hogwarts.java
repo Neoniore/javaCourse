@@ -1,10 +1,10 @@
-package pro.sky.my.javacourse.course2._2encapsulationandinheritance;
+package pro.sky.my.javacourse.course2.lesson_2.encapsulation_inheritance;
 
 public class Hogwarts {
 
     private final String name;
-    private int powerOfMagic;
-    private int transgressionDistance;
+    private final int powerOfMagic;
+    private final int transgressionDistance;
 
     /**
      *

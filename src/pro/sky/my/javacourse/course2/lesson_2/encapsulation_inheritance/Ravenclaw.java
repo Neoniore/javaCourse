@@ -1,12 +1,12 @@
-package pro.sky.my.javacourse.course2._2encapsulationandinheritance;
+package pro.sky.my.javacourse.course2.lesson_2.encapsulation_inheritance;
 
 // Когтевран
 
 public class Ravenclaw extends Hogwarts {
 
-    private int mind;
-    private int wisdom;
-    private int creativity;
+    private final int mind;
+    private final int wisdom;
+    private final int creativity;
 
     /**
      *

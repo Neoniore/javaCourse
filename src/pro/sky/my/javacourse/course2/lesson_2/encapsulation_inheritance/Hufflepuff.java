@@ -1,12 +1,12 @@
-package pro.sky.my.javacourse.course2._2encapsulationandinheritance;
+package pro.sky.my.javacourse.course2.lesson_2.encapsulation_inheritance;
 
 // Пуффендуй
 
 public class Hufflepuff extends Hogwarts {
 
-    private int industriousness;
-    private int loyalty;
-    private int honesty;
+    private final int industriousness;
+    private final int loyalty;
+    private final int honesty;
 
     /**
      *

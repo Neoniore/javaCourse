@@ -1,6 +1,4 @@
-package pro.sky.my.javacourse.course2._1memoryinjava;
-
-import java.util.Arrays;
+package pro.sky.my.javacourse.course2.lesson_1.memory_java;
 
 public class Homework {
     public static void main(String[] args) {
@@ -18,9 +16,9 @@ public class Homework {
 //        System.out.println("value.toString() = " + Arrays.toString(value));
 
         Person person = new Person("Lyapis", "Trubetskoy");
-        System.out.println("person.toString() = " + person.toString());
+        System.out.println("person.toString() = " + person);
         changePerson(person);
-        System.out.println("person.toString() = " + person.toString());
+        System.out.println("person.toString() = " + person);
 
     }
 

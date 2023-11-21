@@ -1,12 +1,12 @@
-package pro.sky.my.javacourse.course2._2encapsulationandinheritance;
+package pro.sky.my.javacourse.course2.lesson_2.encapsulation_inheritance;
 
 public class Slytherin extends Hogwarts {
 
-    private int cunning;
-    private int determination;
-    private int ambition;
-    private int resourcefulness;
-    private int thirstForPower;
+    private final int cunning;
+    private final int determination;
+    private final int ambition;
+    private final int resourcefulness;
+    private final int thirstForPower;
 
     /**
      *
