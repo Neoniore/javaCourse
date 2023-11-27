@@ -5,7 +5,9 @@ public class Car extends VehicleOnWheels {
         super(modelName, wheelsCount);
     }
 
-    public void checkEngine() {
+    @Override
+    public void check() {
+        super.check();
         System.out.println("Проверяем двигатель");
     }
 }
