@@ -9,9 +9,9 @@ public class Tests {
         try {
             CheckCredencials.checkLoginPassword(login, password, confirmPassword);
         } catch (WrongLoginException e) {
-            System.out.println("Некорректный логин");
+            System.out.println("Логин не соответствуют требованиям");
         } catch (WrongPasswordException e) {
-            System.out.println("Некорректный пароль или пароли не совпадают");
+            System.out.println("Пароль не соответствуют требованиям или пароли не совпадают");
         }
     }
 }
