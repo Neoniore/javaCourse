@@ -1,15 +1,14 @@
 package pro.sky.my.javacourse.course2.lesson_6;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class CollectionsHw {
     public static void main(String[] args) {
-        task1();
-        task2();
+//        task1();
+//        task2();
         task3();
-        task4();
+        task3Alternative();
+//        task4();
     }
 
     private static void task1() {
@@ -45,6 +44,12 @@ public class CollectionsHw {
                 word = strings.get(i);
             }
         }
+    }
+
+    public static void task3Alternative() {
+        List<String> strings = new ArrayList<>(List.of("два", "один", "два", "три", "один", "три", "пять", "три"));
+        Set<String> stringsSet = new HashSet<>(strings);
+        System.out.println(stringsSet);
     }
 
     public static void task4() {
